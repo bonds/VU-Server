@@ -5,12 +5,14 @@ with python3Packages;
 buildPythonApplication rec {
   pname = "vu-server";
   version = "0.1";
+
   src = fetchFromGitHub {
-    owner = "SasaKaranovic";
+    owner = "bonds";
     repo = "VU-Server";
-    rev = "v20240329";
-    sha256 = "K2oJrqgNGRus5bvYHdhtyDQeHvCbW+fAlQLMn00Ovco=";
+    rev = "master";
+    sha256 = "Ia7m3hlBEO/t24k7AHFcl8fQXyUxgqwQ1bLMfsgixqQ=";
   };
+
   doCheck = false;
   
   propagatedBuildInputs = [ 
